@@ -61,7 +61,9 @@ func GetDay() int {
 func CheckMonth() []int {
 	number := GetDay()
 	var month_and_day []int
-	if number <= 186 {
+	if number == 0 {
+		return []int{0, 0}
+	} else if number <= 186 {
 		day := number % 31
 		month := number/31 + 1
 		if day == 0 {
